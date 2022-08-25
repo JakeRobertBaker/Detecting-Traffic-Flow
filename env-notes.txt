@@ -3,6 +3,27 @@
 # --openmmlab--
 conda create --name openmmlab python=3.8 -y
 conda activate openmmlab
-# on lab machine
+# Install Cuda, for example on lab machine:
 source /vol/cuda/11.3.1-cudnn8.2.1/setup.sh
 conda install pytorch torchvision torchaudio cudatoolkit=11.3 -c pytorch
+# After installing CUDA
+pip install -U openmim
+mim install mmcv-full
+pip install mmdet
+# Install sahi requirments
+cd sahi
+pip install -r requirements.txt
+# gets segment error
+
+
+# --mmdet--
+conda create --name mmdet
+conda activate mmdet
+conda install pytorch=1.10.0 torchvision=0.11.1 cudatoolkit=11.3 -c pytorch
+cd inference
+pip install -r trained_models/tood/tood-req.txt
+pip install -r ../sahi/requirements.txt
+pip install yolov5
+
+
+# --sahi-yolov5--

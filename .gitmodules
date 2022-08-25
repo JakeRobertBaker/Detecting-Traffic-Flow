@@ -3,4 +3,4 @@
 	url = https://github.com/ultralytics/yolov5
 [submodule "sahi"]
 	path = sahi
-	url = https://github.com/obss/sahi.git
+	url = https://github.com/JakeRobertBaker/sahi.git
