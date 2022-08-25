@@ -63,5 +63,5 @@ result = predict(
     force_postprocess_type=True,
     project = "inference-WV3",
     name = "yolov5",
-    export_pickle = True
+    export_pickle = False
 )
