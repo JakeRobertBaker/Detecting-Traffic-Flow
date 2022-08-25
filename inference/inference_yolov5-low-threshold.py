@@ -12,7 +12,7 @@ yolov5_model_path = 'trained_models/yolov5/best.pt'
 model_type = "yolov5"
 model_path = yolov5_model_path
 model_device = "cuda:0"
-model_confidence_threshold = 0.2
+model_confidence_threshold = 0.05
 
 slice_height = 400
 slice_width = 400
@@ -62,6 +62,7 @@ result = predict(
     return_dict=True,
     force_postprocess_type=True,
     project = "inference-WV3",
-    name = "yolov5",
-    export_pickle = True
+    name = "yolov5-low-threshold",
+    export_pickle = True,
+    novisual = True
 )

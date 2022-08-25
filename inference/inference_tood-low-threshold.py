@@ -1,18 +1,18 @@
-# import required functions, classes
-from sahi.model import Yolov5DetectionModel
+from sahi.model import MmdetDetectionModel
 from sahi.utils.cv import visualize_object_predictions, read_image
 from sahi.predict import get_prediction, get_sliced_prediction, predict
 import numpy as np
 import pickle
-from models.experimental import attempt_load
-print('imports success')
+print('import success')
 
 
-yolov5_model_path = 'trained_models/yolov5/best.pt'
-model_type = "yolov5"
-model_path = yolov5_model_path
+tood_config_path = 'trained_models/mmdet_configs/xview_tood/tood_crop_300_500_cls_cars_trucks_1e-3_new_pipe_csg_machine.py'
+tood_model_path = "trained_models/tood/latest.pth"
+
+model_type = "mmdet"
+model_path = tood_model_path
 model_device = "cuda:0"
-model_confidence_threshold = 0.2
+model_confidence_threshold = 0.05
 
 slice_height = 400
 slice_width = 400
@@ -38,6 +38,7 @@ setting_params = INFERENCE_SETTING_TO_PARAMS[INFERENCE_SETTING]
 result = predict(
     model_type=model_type,
     model_path=model_path,
+    model_config_path=tood_config_path,
     model_confidence_threshold=model_confidence_threshold,
     model_device=model_device,
     model_category_mapping=None,
@@ -62,6 +63,7 @@ result = predict(
     return_dict=True,
     force_postprocess_type=True,
     project = "inference-WV3",
-    name = "yolov5",
-    export_pickle = True
+    name = "tood-low-threshold",
+    export_pickle = True,
+    novisual = True
 )

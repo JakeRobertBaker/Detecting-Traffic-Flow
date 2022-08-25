@@ -61,5 +61,8 @@ result = predict(
     visual_export_format="png",
     verbose=0,
     return_dict=True,
-    force_postprocess_type=True
+    force_postprocess_type=True,
+    project = "inference-WV3",
+    name = "tood",
+    export_pickle = True
 )
