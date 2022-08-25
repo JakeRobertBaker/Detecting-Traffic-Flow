@@ -1,0 +1,8 @@
+# ENV NOTES
+
+# --openmmlab--
+conda create --name openmmlab python=3.8 -y
+conda activate openmmlab
+# on lab machine
+source /vol/cuda/11.3.1-cudnn8.2.1/setup.sh
+conda install pytorch torchvision torchaudio cudatoolkit=11.3 -c pytorch
