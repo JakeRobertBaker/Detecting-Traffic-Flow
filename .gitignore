@@ -4,3 +4,5 @@
 *.png
 *.tif
 *.tiff
+traffic-flow/image_time_traffic_reports/*
+traffic-flow/high_quality_traffic_reports/*
