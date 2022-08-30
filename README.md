@@ -32,6 +32,13 @@ ln -s ../yolov5/utils utils
     pip install yolov5
     ```
     
+    tf:
+    ```
+    11.2.1-cudnn8.1.0.77
+    source /vol/cuda/11.2.1-cudnn8.1.0.77/setup.sh
+
+    ```
+    
     
     
 ## Inference
