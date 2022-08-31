@@ -8,6 +8,7 @@ from sklearn.metrics import mean_absolute_error
 from sklearn.metrics import mean_absolute_percentage_error
 from sklearn.metrics import r2_score
 import seaborn as sns
+from tqdm import tqdm
 
 # Import Traffic count predictions
 traffic_predictions = pd.read_feather('predictions/traffic-counts/pred_traffic_counts_yolov5')
