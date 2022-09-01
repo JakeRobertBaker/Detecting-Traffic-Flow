@@ -8,3 +8,4 @@ traffic-flow/image_time_traffic_reports/*
 traffic-flow/high_quality_traffic_reports/*
 *.pyc
 traffic-flow/__pycache__/*
+traffic-flow/image_year_traffic_reports/*
