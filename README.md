@@ -44,3 +44,11 @@ ln -s ../yolov5/utils utils
 ## Inference
 
 To detect traffic on images make sure to have the images inside `inference/WV3` and then run `cd inference` and `python inference_yolov5.py` or `python inference_tood.py` for the (worse peforming) tood detector.
+
+
+To detect traffic run without image exports
+```bash
+
+python inference.py --conf_thresh 0.05 --novisual --export_pickle --name single-lane-yolov5
+python inference.py --conf_thresh 0.05 --novisual --export_pickle --source_image_dir WV3-dual-lane --name double-lane-yolov5
+```

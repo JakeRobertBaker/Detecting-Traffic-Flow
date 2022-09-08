@@ -13,12 +13,6 @@ model_type = "yolov5"
 model_path = yolov5_model_path
 model_device = "cuda:0"
 model_confidence_threshold = 0.2
-
-slice_height = 400
-slice_width = 400
-overlap_height_ratio = 0.2
-overlap_width_ratio = 0.2
-
 source_image_dir = "WV3/"
 
 INFERENCE_SETTING_TO_PARAMS = {
