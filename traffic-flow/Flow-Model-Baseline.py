@@ -63,11 +63,10 @@ for area in reports.keys():
     print(area)
 
     train_report = get_reports(area)
-    start_time, end_time = year_str(times[area])
-    train_report = train_report[train_report.timestamp.between(start_time, end_time)]
-    
+    start_time, end_time = "2019-01-01 00:14:00", "2022-12-31 23:59:00"
     test_report = pd.DataFrame(pd.date_range(start_time, end_time, freq="15min"))
     test_report.columns = ['timestamp']
+    test_report = test_report[test_report.timestamp.between(train_report.timestamp.min(), train_report.timestamp.max())]
     print('reports compiled')
 
     # Add the time factors to the data
