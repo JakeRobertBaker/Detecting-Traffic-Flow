@@ -63,4 +63,4 @@ The linear model needs around 100GB of RAM to run, the dataset is huge! To produ
 Afterwards the notebooks Flow-Model and Flow-Model-Linear walkthrough the prediction of AADT/AMD with median and linear models respectively.
 
 ## Plots
-This is a miscellanious notebook used to create plots for my report. I have left it in for the curious to explore.
+This is a miscellanious notebook used to create plots for my report. I have left it in for the curious to explore :) .
